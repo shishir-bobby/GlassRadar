@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Glass_Radar
+
+  Created by Pankti on 02/03/13.
+  Copyright (c) 2013 Bamboo Rocket Apps. All rights reserved.
+*/
+
+"TITLE" = "¡Hola!";
+"WelcomeKey" = "Benvenuto!!!";
+"Loginkey" = "ILogin";

@@ -1,0 +1,140 @@
+/* 
+  Localizable.strings
+  Glass_Radar
+
+  Created by Mina Shau on 3/2/13.
+  Copyright (c) 2013 Bamboo Rocket Apps. All rights reserved.
+*/
+
+/*Login Screens Keys*/
+"Loginkey" = "Login";
+"SliderDistancekey" = "Default Distance";
+"Forgotpwkey" = "Forgotten your password?";
+/*Settings*/
+"Settingskey"="Settings";
+"Logoutkey"="Logout";
+"LocationGPSkey"="Location (GPS)";
+"LocationPostcodekey"="Location (Postcode)";
+"Internationalkey"="International";
+"Feedbackkey"="Send Us Feedback";
+"AboutKey"="About";
+"TermsKey"="Terms and Conditions";
+"PrivacyKey"="Privacy Policy";
+"LegalKey"="Legal";
+/*Help*/
+"HelpNavkey"="Help";
+
+"lable01key"="This is the iOS iPhone version of";
+"lable02key"="You must be a subscriber to Glass's Radar with an existing Username to use this app.";
+"lable03key"="If you require access, or help, please contact Customer Services on";
+"lable04key"="If you require any technical assistance please call our helpdesk on";
+/*Location*/
+"lblLocationkey"="Use your current GPS location or search from a specific postcode";
+"btndsavekey"="Save";
+"picGpskey"="Use GPS";
+"picPostkey"="Use Postcode";
+"Locationkey"="Location";
+/*Feedback*/
+"Feedbacklblkey"="We'd like to hear your comments regarding our new iphone app. Please submit any questions or comments in the form below:";
+"Feedbackey"="Feedback";
+"Commentkey"="Your Comment or Question";
+"BtnSendkey"="Send";
+/**/
+"Internationalkey"="International";
+"Countrykey"="Country";
+"Currkey"="Currency";
+"Languagekey"="Language";
+"Distancekey"="Distance in (Miles)";
+/**/
+/*Pass reset*/
+"lblinfo1key"="Simply enter your Username below and press Request. We will then send you an email with a new randomly generated password.";
+"lblinfo2key"="If you're unable to remember your Username please contact customer service on";
+"Requestkey"="Request";
+
+"PasswordResetNavKey"="Password Reset";
+/*Vrm Search*/
+"UseSearchTreeKey"="Use Search Tree";
+"UseAverageMileageKey"="Use Average Mileage";
+"FindValueKey"="Find & Value";
+"VRMSearchNavKey"="VRM Search";
+/**/
+/*for on sale and sold*/
+"Mileskey"="(miles)";
+"SortedBykey"="Sorted by";
+"Distanefromkey"="Distance from";
+"OnSaleNavKey"="On Sale";
+"OnSoldNavKey"="Sold";
+"btnSortkey"="Sort";
+/**/
+/*Common Controls*/
+"BackBtnKey"="Back";
+/**/
+"AboutUSKey"="About";
+/**/
+"CarAdvertNavkey"="Car Advert";
+/**/
+"PriceChangeNavkey"="Price Change History";
+/**/
+"VRMBackkey"="VRM";
+/*Select Car*/
+"SelectCarNavkey" = "Select vehicle";
+"Selectcarlblkey" = "Select your vehicle from the following, or return to the VRM is this is the wrong vehicle";
+/*Vehicle Search tree*/
+"VehicleSearchtreeNavKey" = "Vehicle search tree";
+/*************************************************************/
+"VRMSummeryNavKey"="VRM Summary";
+"RadarSummeryNavKey"="Radar Summary";
+"wrongVehiclekey"="Wrong vehicle?";
+"btnMenukey"="Menu";
+"ViewOnSaleMatcheskey"="View On Sale Matches";
+"ViewSoldMatcheskey"="View Sold Matches";
+/**************************************************************/
+"Historynavkey"="History";
+"btnEditkey"="Edit";
+"btnDonekey"="Done";
+/***/
+"SortNavKey"="Select Sort";
+"DistanceNavKey" = "Default Distance";
+"DistanceBtnKey" = "Save";
+"SortlblKey"="or enter  keyword e.g zetec";
+"ApplybtnKey"="Apply";
+
+
+/**/
+
+"TITLE" = "Hello!";
+"WelcomeKey" = "Welcome!!!";
+"GBvRMErrorCodeField1"  = "VRMValuation Web Service Call Failed – unauthorised web service call";
+"GBvRMErrorCodeField2" = "Unrecognised VRM";
+"GBvRMErrorCodeField3" = "No Values";
+"GBvRMErrorCodeField4" = "VRM Web Service Failed";
+"GBvRMErrorCodeField5" = "Valuation Web Service Failed";
+"GBvRMErrorCodeField6" = "VRM No Vehicle Returned";
+"GBvRMErrorCodeField100" = "Authentication/Authorisation error. Credentials not valid or do not have authorisation to use VRM";
+"GBvRMErrorCodeField200" = "Vehicle registration not supplied.";
+"GBvRMErrorCodeField201" = "Client does not have a data provider mapping.";
+"GBvRMErrorCodeField202" = "Data provider not configured";
+"GBvRMErrorCodeField203" = "Data provider not currently available";
+"GBvRMErrorCodeField204" = "Error reported from Glass’s IDD (IDD DB Error)";
+"GBvRMErrorCodeField205" = "Error connecting to data provider";
+"GBvRMErrorCodeField206" = "Data provider is reporting an error";
+"GBvRMErrorCodeField207" = "No matching vehicles found in IDD";
+"GBvRMErrorCodeField208" = "Data provider failed to return any MVRIS/Model codes";
+"GBvRMErrorCodeField209" = "Data provider failed to return any vehicle data";
+"GBvRMErrorCodeField210" = "Data provider returned mismatched VRM data";
+/*For PassWord Reset Screen*/
+"resetSent" = "Password reset successfully, an email has been sent to your registered email address with your new password.";
+"resetNotFound1" = "Sorry your username";
+"resetNotFound2" = "has not been found";
+/*ask about resetPost*/
+"resetPost1" = "If you are unable to remember your";
+"resetPost2" = "please contact customer services on.";
+
+"Flurrykey" = "Flurry";
+"lblflurrytxtkey" = "This is app uses 'Flurry' to measure statistical data that will help enhance the performance of the app. That data will be anonymously gathered and sent.";
+"lblflurrytxt2key" ="You may opt out of this by changing the setting below to 'off'";
+"AllowFlurrykey" = "Allow Flurry?";
+
+
+
+

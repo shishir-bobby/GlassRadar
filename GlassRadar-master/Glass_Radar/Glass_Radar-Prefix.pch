@@ -1,0 +1,132 @@
+//
+// Prefix header for all source files of the 'Glass_Radar' target in the 'Glass_Radar' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+#import <Quartzcore/QuartzCore.h>
+#import <QuickLook/QuickLook.h>
+#import <AddressBookUI/AddressBookUI.h>
+#import <CoreLocation/CLGeocoder.h>
+#import <CoreLocation/CLPlacemark.h>
+#import "Flurry.h"
+#import "SVProgressHUD.h"
+#import "SortViewController.h"
+#import "VRMSearchViewController.h"
+#import "SummaryViewController.h"
+#import "OnSaleViewController.h"
+#import "OnSaleViewController.h"
+#import "AppDelegate.h"
+#import "AccessDeniedViewController.h"
+#import "HistoryViewController.h"
+#import "OnSoldViewController.h"
+#import "PriceHistoryViewController.h"
+#import "LocationViewController.h"
+#import "WebServices.h"
+#import "NSData+Base64.h"
+#import "NSData-AES.h"
+#import "JSON.h"
+#import "WebServicesjson.h"
+#import "Base64.h"
+#import "NSData+CommonCrypto.h"
+#import "AboutVC.h"
+#import "SKDatabase.h"
+#import "SelectCarViewController.h"
+#import "PrivacyVC.h"
+#import "TermsVC.h"
+#import "LegalVc.h"
+#import "GTMStringEncoding.h"
+#import "TestFlight.h"
+#import "SelectCarFromSearchTreeView.h"
+#import "KeychainItemWrapper.h"
+#import "DefaultDistanceView.h"
+
+
+#define noInternet @"There is currently no internet connection detected – please try again when you are connected to the internet."
+#define noMileage @"You have not entered a mileage, please enter a mileage, or use average mileage"
+#define systemError @"Error with Username/Password, please try again or call customer services on"
+#define Timeout @"There was a problem with the connection, please try again later or call the Customer Services on"
+#define ErrorConnection @"There was a problem with the connection, please try again later or call the Customer Services on"
+#define ErrorInResponse @"There was a system problem please try again later or call the Customer Services on"
+#define ErrorInUser @"Sorry we cannot reset this users password, please contact customer support on"
+#define customerServicesPhoneNo @"01932 823 823"
+
+SKDatabase *objSKDatabase;
+AppDelegate *appDel;
+
+// ********************************** TEST DATA ********************************* //
+
+//TEST Proxy URL
+#define Proxy_WS_URL @"https://test.vehicle.etgws.co.uk/VehicleWS.svc/Json/"
+
+//TEST Proxy WS Credentials
+#define Proxy_WS_ClientCode @"Bamboo"
+#define Proxy_WS_AccountName @"Bamboo"
+#define Proxy_WS_Password @"B@mb00"
+
+//TEST Flurry Key - WYW5RMQGPD8MHVHR96B4
+#define Flurry_API_Key @"WYW5RMQGPD8MHVHR96B4"
+#define Customer_Email @"test.bamboorocketapps@gmail.com"
+
+#define Login_URL [NSString stringWithFormat:(@"%@AuthenticateUserWithProduct/Post"),Proxy_WS_URL]
+#define ForgotPassword_URL [NSString stringWithFormat:(@"%@ForgotPassword/Post"),Proxy_WS_URL]
+#define VRM_URL [NSString stringWithFormat:(@"%@GetVRMValuation/Post"),Proxy_WS_URL]
+#define GetListBodyType_URL [NSString stringWithFormat:(@"%@GetListBodyType/Post"),Proxy_WS_URL]
+#define GetMakes_URL [NSString stringWithFormat:(@"%@GetListMake/Post"),Proxy_WS_URL]
+#define GetListModel_URL [NSString stringWithFormat:(@"%@GetListModel/Post"),Proxy_WS_URL]
+#define listSimilarAdvertisements_URL [NSString stringWithFormat:(@"%@ListSimilarAdvertisements/Post"),Proxy_WS_URL]
+#define listSimilarRemovedAdvertisements_URL [NSString stringWithFormat:(@"%@ListSimilarRemovedAdvertisements/Post"),Proxy_WS_URL]
+#define GetOwnVehicleSpotPrice_URL [NSString stringWithFormat:(@"%@GetOwnVehicleSpotPrice/Post"),Proxy_WS_URL]
+#define GetAverageSellingTime_URL [NSString stringWithFormat:(@"%@GetAverageSellingTime/Post"),Proxy_WS_URL]
+#define ListPriceHistory_URL [NSString stringWithFormat:(@"%@ListPriceHistory/Post"),Proxy_WS_URL]
+#define GetListImmatriculationYear_URL [NSString stringWithFormat:(@"%@GetListImmatriculationYear/Post"),Proxy_WS_URL]
+#define GetListTypeEx_URL [NSString stringWithFormat:(@"%@GetListTypeEx/Post"),Proxy_WS_URL]
+#define GetValuation_URL [NSString stringWithFormat:(@"%@GetValuation/Post"),Proxy_WS_URL]
+
+
+// ********************************** LIVE DATA ********************************* //
+
+//LIVE Proxy URL
+#define Proxy_WS_URL_LIVE @"https://www.vehicle.etgws.co.uk/vehiclews.svc/json/"
+
+//LIVE Proxy WS Credentials
+#define Proxy_WS_ClientCode_LIVE @"Bamboo"
+#define Proxy_WS_AccountName_LIVE @"Bamboo"
+#define Proxy_WS_Password_LIVE @"hfjr75kyrt"
+
+//LIVE_SWITCH
+//TEST Flurry Key - WYW5RMQGPD8MHVHR96B4
+//LIVE Flurry Key - J77R7SZRYXDHC55B324H
+
+///TNJWBD2Y6WSJSDJTYSPB
+//#define Flurry_API_Key_LIVE @"TNJWBD2Y6WSJSDJTYSPB"
+#define Flurry_API_Key_LIVE @"WYW5RMQGPD8MHVHR96B4"
+//#define Flurry_API_Key_LIVE @"J77R7SZRYXDHC55B324H"
+
+#define Customer_Email_LIVE @"customer@glass.co.uk"
+
+#define Login_URL_LIVE [NSString stringWithFormat:(@"%@AuthenticateUserWithProduct/Post"),Proxy_WS_URL_LIVE]
+#define ForgotPassword_URL_LIVE [NSString stringWithFormat:(@"%@ForgotPassword/Post"),Proxy_WS_URL_LIVE]
+#define VRM_URL_LIVE [NSString stringWithFormat:(@"%@GetVRMValuation/Post"),Proxy_WS_URL_LIVE]
+#define GetListBodyType_URL_LIVE [NSString stringWithFormat:(@"%@GetListBodyType/Post"),Proxy_WS_URL_LIVE]
+#define GetMakes_URL_LIVE [NSString stringWithFormat:(@"%@GetListMake/Post"),Proxy_WS_URL_LIVE]
+#define GetListModel_URL_LIVE [NSString stringWithFormat:(@"%@GetListModel/Post"),Proxy_WS_URL_LIVE]
+#define listSimilarAdvertisements_URL_LIVE [NSString stringWithFormat:(@"%@ListSimilarAdvertisements/Post"),Proxy_WS_URL_LIVE]
+#define listSimilarRemovedAdvertisements_URL_LIVE [NSString stringWithFormat:(@"%@ListSimilarRemovedAdvertisements/Post"),Proxy_WS_URL_LIVE]
+#define GetOwnVehicleSpotPrice_URL_LIVE [NSString stringWithFormat:(@"%@GetOwnVehicleSpotPrice/Post"),Proxy_WS_URL_LIVE]
+#define GetAverageSellingTime_URL_LIVE [NSString stringWithFormat:(@"%@GetAverageSellingTime/Post"),Proxy_WS_URL_LIVE]
+#define ListPriceHistory_URL_LIVE [NSString stringWithFormat:(@"%@ListPriceHistory/Post"),Proxy_WS_URL_LIVE]
+#define GetListImmatriculationYear_URL_LIVE [NSString stringWithFormat:(@"%@GetListImmatriculationYear/Post"),Proxy_WS_URL_LIVE]
+#define GetListTypeEx_URL_LIVE [NSString stringWithFormat:(@"%@GetListTypeEx/Post"),Proxy_WS_URL_LIVE]
+#define GetValuation_URL_LIVE [NSString stringWithFormat:(@"%@GetValuation/Post"),Proxy_WS_URL_LIVE]
+
+#endif
+

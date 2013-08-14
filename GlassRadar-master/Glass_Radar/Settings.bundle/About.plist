@@ -1,0 +1,16 @@
+{
+	PreferenceSpecifiers = (
+		{
+			Title = About;
+			Type = PSGroupSpecifier;
+		},
+		{
+			Title = "NO TECHNICAL SUPPORT IS PROVIDED FOR THIS SOFTWARE";
+			Type = PSGroupSpecifier;
+		},
+		{
+			Title = "NO TECHNICAL SUPPORT IS PROVIDED FOR THIS SOFTWARE";
+			Type = PSGroupSpecifier;
+		},
+	);
+}
